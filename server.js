@@ -17,4 +17,6 @@ app.use(
 );
 
 app.get("/", (req, res) => res.send("Hello dunia!"));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => {
+  console.log(process.env.SECRET_URL);
+  console.log(`Example app listening on port ${port}!`)});
